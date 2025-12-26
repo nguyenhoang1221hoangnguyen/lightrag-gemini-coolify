@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+python-multipart
+lightrag-hku
+google-generativeai
+numpy

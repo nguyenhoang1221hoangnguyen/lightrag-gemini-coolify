@@ -1,0 +1,30 @@
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 2048
+
+embedding:
+  provider: openai
+  model: text-embedding-3-large
+
+openai:
+  api_key: ${OPENAI_API_KEY}
+
+# Giảm load – rất quan trọng
+processing:
+  max_concurrent_chunks: 2
+  max_concurrent_tasks: 1
+
+entity_extraction:
+  enabled: true
+  parallel: false
+
+cache:
+  enabled: true
+  backend: file
+  path: /data/cache
+
+storage:
+  backend: file
+  path: /data/storage
